@@ -47,6 +47,7 @@ body {
 
 .custom-nav-link:hover {
     color: #cccccc;
+    text-decoration: none;
 }
 
 /* Rest of your CSS remains unchanged */
