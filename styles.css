@@ -1,11 +1,57 @@
 
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #111111;
     color: #ffffff;
 }
 
+/* Header styles */
+.custom-header {
+    background-color: #0066ff;
+    padding: 16px 0;
+    text-align: center;
+}
 
+.custom-container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-col-12 {
+    width: 100%;
+}
+
+.custom-mb-0 {
+    margin-bottom: 0;
+}
+
+.section-links {
+    margin-top: 16px;
+}
+
+.custom-nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.custom-nav-link:hover {
+    color: #cccccc;
+}
+
+/* Rest of your CSS remains unchanged */
+
+/* Full screen sections */
 .full-screen {
     min-height: 100vh;
     display: flex;
@@ -13,38 +59,10 @@ body {
     justify-content: center;
 }
 
-
-#header {
-    background-color: #0066ff;
-}
-
-#header h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-}
-
-
-#main-nav .nav-link {
-    color: #ffffff;
-}
-
-#main-nav .nav-link:hover {
-    color: #cccccc;
-}
-
-
-section h2 {
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-}
-
-
+/* Explore Space section */
 #explore-space {
     background-image: url('space-background.jpg');
     background-size: cover;
-    background-color: #111111;
     background-position: center;
     position: relative;
     padding: 0;
@@ -82,7 +100,7 @@ section h2 {
     color: #ffffff;
 }
 
-
+/* Space Insights section */
 #space-insights {
     background-color: #000000;
 }
@@ -96,7 +114,7 @@ section h2 {
     line-height: 1.6;
 }
 
-
+/* Missions section */
 #missions {
     background-color: #333333;
 }
@@ -109,7 +127,7 @@ section h2 {
     color: #cccccc;
 }
 
-
+/* Gallery section */
 #gallery {
     background-color: #000000;
 }
@@ -134,7 +152,7 @@ section h2 {
     width: 100%;
 }
 
-
+/* Contact section */
 #contact {
     background-color: #333333;
 }
@@ -154,7 +172,7 @@ section h2 {
     height: 100%;
 }
 
-
+/* Footer */
 footer {
     background-color: #000000;
 }
