@@ -42,7 +42,7 @@ section h2 {
 
 /* Explore Space section */
 #explore-space {
-    background-image: url('saturn.jpg');
+    background-image: url('space-background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -95,16 +95,16 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Probes section */
-#probes {
+/* Missions section */
+#missions {
     background-color: #333333;
 }
 
-#probes h2 {
+#missions h2 {
     color: #ffffff;
 }
 
-#probes p {
+#missions p {
     color: #cccccc;
 }
 
