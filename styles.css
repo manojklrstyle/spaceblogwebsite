@@ -1,11 +1,11 @@
-/* General styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #111111;
     color: #ffffff;
 }
 
-/* Full screen sections */
+
 .full-screen {
     min-height: 100vh;
     display: flex;
@@ -13,7 +13,7 @@ body {
     justify-content: center;
 }
 
-/* Header styles */
+
 #header {
     background-color: #0066ff;
 }
@@ -23,7 +23,7 @@ body {
     font-size: 2.5rem;
 }
 
-/* Navigation styles */
+
 #main-nav .nav-link {
     color: #ffffff;
 }
@@ -32,7 +32,7 @@ body {
     color: #cccccc;
 }
 
-/* Section headings */
+
 section h2 {
     color: #ffffff;
     text-align: center;
@@ -40,10 +40,11 @@ section h2 {
     font-size: 2.5rem;
 }
 
-/* Explore Space section */
+
 #explore-space {
     background-image: url('space-background.jpg');
     background-size: cover;
+    background-color: #111111;
     background-position: center;
     position: relative;
     padding: 0;
@@ -81,7 +82,7 @@ section h2 {
     color: #ffffff;
 }
 
-/* Space Insights section */
+
 #space-insights {
     background-color: #000000;
 }
@@ -95,7 +96,7 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Missions section */
+
 #missions {
     background-color: #333333;
 }
@@ -108,7 +109,7 @@ section h2 {
     color: #cccccc;
 }
 
-/* Gallery section */
+
 #gallery {
     background-color: #000000;
 }
@@ -133,7 +134,7 @@ section h2 {
     width: 100%;
 }
 
-/* Contact section */
+
 #contact {
     background-color: #333333;
 }
@@ -153,7 +154,7 @@ section h2 {
     height: 100%;
 }
 
-/* Footer */
+
 footer {
     background-color: #000000;
 }
