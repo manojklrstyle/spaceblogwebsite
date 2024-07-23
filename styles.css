@@ -1,7 +1,6 @@
-
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background-color: #111111;
     color: #ffffff;
 }
@@ -11,6 +10,14 @@ body {
     background-color: #0066ff;
     padding: 16px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.custom-header:hover {
+    background-color: #0055d4;
 }
 
 .custom-container {
@@ -43,14 +50,13 @@ body {
     text-decoration: none;
     margin: 0 10px;
     font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .custom-nav-link:hover {
     color: #cccccc;
-    text-decoration: none;
+    transform: scale(1.1);
 }
-
-/* Rest of your CSS remains unchanged */
 
 /* Full screen sections */
 .full-screen {
@@ -58,11 +64,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 80px;
 }
 
 /* Explore Space section */
 #explore-space {
-    background-image: url('space-background.jpg');
+    background-image: url('https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721606400&semt=sph');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -75,6 +82,16 @@ body {
     bottom: 50px;
     left: 50px;
     max-width: 50%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #explore-space h2 {
@@ -87,6 +104,11 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-text:hover {
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .explore-text h3 {
@@ -108,24 +130,53 @@ body {
 
 #space-insights h2 {
     font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #0066ff;
 }
 
 #space-insights p {
     font-size: 1.2rem;
     line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Missions section */
 #missions {
-    background-color: #333333;
+    background-color: #1a1a1a;
 }
 
 #missions h2 {
     color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#missions h4 {
+    color: #0066ff;
+    margin-bottom: 15px;
 }
 
 #missions p {
     color: #cccccc;
+}
+
+#missions img {
+    transition: transform 0.3s ease;
+}
+
+#missions img:hover {
+    transform: scale(1.05);
 }
 
 /* Gallery section */
@@ -135,6 +186,8 @@ body {
 
 #gallery h2 {
     color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #gallery p {
@@ -145,35 +198,224 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 .gallery-item img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Space Technology section */
+#space-technology {
+    background-color: #1a1a1a;
+}
+
+#space-technology h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tech-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+}
+
+.tech-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tech-info {
+    padding: 20px;
+}
+
+.tech-info h3 {
+    color: #0066ff;
+    margin-bottom: 10px;
+}
+
+/* Future Exploration section */
+#future-exploration {
+    background-color: #000000;
+    
+}
+
+#future-exploration h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.future-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.future-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+}
+
+.future-card h3 {
+    color: #0066ff;
+    margin-bottom: 15px;
+}
+
+/* Space Innovations section */
+#space-innovations {
+    background-color: #1a1a1a;
+    background-image: url("https://i.pinimg.com/originals/c8/f5/13/c8f513242944e5c169a456090086bf08.jpg");
+}
+
+#space-innovations h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.innovation-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.innovation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+}
+
+.innovation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.innovation-card h3 {
+    color: #0066ff;
+    padding: 15px 20px 0;
+}
+
+.innovation-card p {
+    padding: 0 20px 20px;
 }
 
 /* Contact section */
 #contact {
-    background-color: #333333;
+    background-color: #1a1a1a;
 }
 
 #contact h2 {
     color: #ffffff;
-}
-
-#contact p {
-    color: #cccccc;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #contact .bg-light {
-    background-color: #ffffff;
-    color: #333333;
-    padding: 20px;
-    height: 100%;
+    background-color: #2a2a2a !important;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .bg-light:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+}
+
+#contact h3 {
+    color: #0066ff;
+    margin-bottom: 20px;
+}
+
+#contact form .form-control {
+    background-color: #3a3a3a;
+    border: none;
+    color: #ffffff;
+}
+
+#contact form .btn-primary {
+    background-color: #0066ff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#contact form .btn-primary:hover {
+    background-color: #0055d4;
 }
 
 /* Footer */
 footer {
     background-color: #000000;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-nav-link {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    #explore-space h2 {
+        font-size: 2.5rem;
+    }
+
+    .explore-space-content {
+        max-width: 80%;
+    }
+
+    #space-insights p {
+        font-size: 1.1rem;
+    }
 }
