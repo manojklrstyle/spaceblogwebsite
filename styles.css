@@ -6,64 +6,40 @@ body {
 }
 
 /* Header styles */
-.header {
-    background-color: #0066ff;
-    padding: 16px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+body {
+    font-family: 'Arial', sans-serif;
 }
 
-
-.nav-link{
-    text-decoration: none;
+.navbar {
+    background-color: #343a40; /* Dark theme */
 }
 
-
-.custom-header:hover {
-    background-color: #0055d4;
+.navbar-brand {
+    color: #00aaff; /* Light blue */
+    font-size: 1.8em; /* Increased font size for emphasis */
+    font-weight: bold;
 }
 
-.custom-container {
-    width: 90%;
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-.custom-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.custom-col-12 {
-    width: 100%;
-}
-
-.custom-mb-0 {
-    margin-bottom: 0;
-}
-
-.section-links {
-    margin-top: 16px;
-}
-
-.custom-nav-link {
-    color: #ffffff;
-    text-decoration: none;
+.nav-link {
+    color: #fff; /* White text for nav links */
     margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.custom-nav-link:hover {
-    color: #cccccc;
-    transform: scale(1.1);
+.nav-link:hover {
+    color: #00aaff; /* Light blue on hover */
 }
+
+h1 {
+    color: #00aaff; /* Highlighted title color */
+    font-size: 2.5em; /* Emphasized title size */
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2em; /* Responsive title size for small screens */
+    }
+}
+
 
 /* Full screen sections */
 .full-screen {
