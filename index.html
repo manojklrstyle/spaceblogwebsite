@@ -22,33 +22,46 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#explore-space">Explore Space</a>
+                    <a class="nav-link" href="#explore-space" data-toggle="collapse" data-target="#navbarNav">Explore Space</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#space-insights">Space Insights</a>
+                    <a class="nav-link" href="#space-insights" data-toggle="collapse" data-target="#navbarNav">Space Insights</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#missions">Missions</a>
+                    <a class="nav-link" href="#missions" data-toggle="collapse" data-target="#navbarNav">Missions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Gallery</a>
+                    <a class="nav-link" href="#gallery" data-toggle="collapse" data-target="#navbarNav">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#space-technology">Space Technology</a>
+                    <a class="nav-link" href="#space-technology" data-toggle="collapse" data-target="#navbarNav">Space Technology</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#future-exploration">Future Exploration</a>
+                    <a class="nav-link" href="#future-exploration" data-toggle="collapse" data-target="#navbarNav">Future Exploration</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#space-innovations">Space Innovations</a>
+                    <a class="nav-link" href="#space-innovations" data-toggle="collapse" data-target="#navbarNav">Space Innovations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact" data-toggle="collapse" data-target="#navbarNav">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
-
+    
+    
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById('navbarNav');
+            navbar.classList.toggle('show');
+        }
+    
+        function closeNavbar() {
+            const navbar = document.getElementById('navbarNav');
+            navbar.classList.remove('show');
+        }
+    </script>
+    
     <section id="explore-space" class="full-screen">
         <div class="explore-space-content">
             <h2>Explore Space</h2>
