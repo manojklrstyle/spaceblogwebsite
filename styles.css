@@ -1,68 +1,101 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #0066ff;
+    --secondary-color: #00ccff;
+    --text-color: #333333;
+    --bg-color: #f0f8ff;
+    --white: #ffffff;
+    --dark-blue: #001f3f;
+}
+
 /* General styles */
 body {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #111111;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* Header styles */
-.header {
-    background-color: #0066ff;
-    padding: 16px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+/* Navbar styles */
+.navbar {
+    background: linear-gradient(135deg, rgba(0,31,63,0.95) 0%, rgba(0,102,255,0.95) 100%);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-
-.nav-link{
-    text-decoration: none;
-}
-
-
-.custom-header:hover {
-    background-color: #0055d4;
-}
-
-.custom-container {
-    width: 90%;
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-.custom-row {
+.navbar-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 5%;
 }
 
-.custom-col-12 {
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffffff, #00ccff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
     width: 100%;
 }
 
-.custom-mb-0 {
-    margin-bottom: 0;
-}
-
-.section-links {
-    margin-top: 16px;
-}
-
-.custom-nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.custom-nav-link:hover {
-    color: #cccccc;
-    transform: scale(1.1);
+.nav-link:hover {
+    color: var(--white);
+    transform: translateY(-2px);
 }
 
 /* Full screen sections */
@@ -76,7 +109,7 @@ body {
 
 /* Explore Space section */
 #explore-space {
-    background-image: url('https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721606400&semt=sph');
+    background-image: url('https://images.unsplash.com/photo-1454789548928-9efd52dc4031');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -102,50 +135,57 @@ body {
 }
 
 #explore-space h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .explore-text {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .explore-text:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .explore-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .explore-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-color);
 }
 
 /* Space Insights section */
 #space-insights {
-    background-color: #000000;
+    background-color: var(--dark-blue);
+    color: var(--white);
 }
 
 #space-insights h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
     text-align: center;
-    color: #0066ff;
+    color: var(--secondary-color);
+    font-family: 'Orbitron', sans-serif;
 }
 
 #space-insights p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
     opacity: 0;
     transform: translateX(-50px);
     animation: fadeInLeft 1s ease forwards;
@@ -160,45 +200,57 @@ body {
 
 /* Missions section */
 #missions {
-    background-color: #1a1a1a;
+    background-color: var(--bg-color);
 }
 
 #missions h2 {
-    color: #ffffff;
+    color: var(--primary-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #missions h4 {
-    color: #0066ff;
-    margin-bottom: 15px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #missions p {
-    color: #cccccc;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 #missions img {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 #missions img:hover {
     transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Gallery section */
 #gallery {
-    background-color: #000000;
+    background-color: var(--white);
 }
 
 #gallery h2 {
-    color: #ffffff;
+    color: var(--primary-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #gallery p {
-    color: #cccccc;
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .gallery-item {
@@ -206,21 +258,21 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .gallery-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
     object-fit: cover;
     height: 100%;
     width: 100%;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .gallery-item:hover img {
@@ -229,164 +281,212 @@ body {
 
 /* Space Technology section */
 #space-technology {
-    background-color: #1a1a1a;
+    background-color: var(--bg-color);
 }
 
 #space-technology h2 {
-    color: #ffffff;
+    color: var(--primary-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .tech-card {
-    background-color: #2a2a2a;
-    border-radius: 10px;
+    background-color: var(--white);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .tech-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .tech-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
 .tech-info {
-    padding: 20px;
+    padding: 30px;
 }
 
 .tech-info h3 {
-    color: #0066ff;
-    margin-bottom: 10px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.tech-info p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* Future Exploration section */
 #future-exploration {
-    background-color: #000000;
-    
+    background-color: var(--dark-blue);
+    color: var(--white);
 }
 
 #future-exploration h2 {
-    color: #ffffff;
+    color: var(--secondary-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .future-card {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
     height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .future-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .future-card h3 {
-    color: #0066ff;
-    margin-bottom: 15px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.future-card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* Space Innovations section */
 #space-innovations {
-    background-color: #1a1a1a;
+    background-color: var(--bg-color);
 }
 
 #space-innovations h2 {
-    color: #ffffff;
+    color: var(--primary-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .innovation-card {
-    background-color: #2a2a2a;
-    border-radius: 10px;
+    background-color: var(--white);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .innovation-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .innovation-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
 .innovation-card h3 {
-    color: #0066ff;
-    padding: 15px 20px 0;
+    color: var(--secondary-color);
+    padding: 20px 25px 0;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .innovation-card p {
-    padding: 0 20px 20px;
+    padding: 0 25px 25px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* Contact section */
 #contact {
-    background-color: #1a1a1a;
+    background-color: var(--white);
 }
 
 #contact h2 {
-    color: #ffffff;
+    color: var(--primary-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #contact .bg-light {
-    background-color: #2a2a2a !important;
-    color: #ffffff;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 #contact .bg-light:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 #contact h3 {
-    color: #0066ff;
-    margin-bottom: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #contact form .form-control {
-    background-color: #3a3a3a;
-    border: none;
-    color: #ffffff;
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+#contact form .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 204, 255, 0.25);
 }
 
 #contact form .btn-primary {
-    background-color: #0066ff;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     border: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #contact form .btn-primary:hover {
-    background-color: #0055d4;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
 }
 
 /* Footer */
 footer {
-    background-color: #000000;
-    padding: 20px 0;
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-color) 100%);
+    padding: 30px 0;
+    color: var(--white);
 }
 
 footer p {
     margin-bottom: 0;
+    font-size: 1.1rem;
 }
 
 /* Animations */
@@ -407,10 +507,51 @@ footer p {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .custom-nav-link {
+@media (max-width: 1200px) {
+    .navbar-brand {
+        font-size: 2.2rem;
+    }
+
+    .nav-link {
         font-size: 1rem;
-        margin: 0 5px;
+    }
+
+    #explore-space h2 {
+        font-size: 3.5rem;
+    }
+
+    .explore-space-content {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        background-color: rgba(0, 31, 63, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    #explore-space h2 {
+        font-size: 3rem;
+    }
+
+    .explore-space-content {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
     }
 
     #explore-space h2 {
@@ -419,9 +560,67 @@ footer p {
 
     .explore-space-content {
         max-width: 80%;
+        left: 30px;
+        bottom: 30px;
+    }
+
+    .explore-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .explore-text p {
+        font-size: 1.1rem;
     }
 
     #space-insights p {
         font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.8rem !important;
+    }
+
+    p {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    #explore-space h2 {
+        font-size: 2rem;
+    }
+
+    .explore-space-content {
+        max-width: 90%;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .explore-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .explore-text p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
     }
 }
