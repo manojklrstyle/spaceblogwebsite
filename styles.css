@@ -1,4 +1,4 @@
-/* Importing Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
@@ -494,7 +494,7 @@ footer p {
     font-size: 1.1rem;
 }
 
-/* Animations */
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -511,7 +511,7 @@ footer p {
     animation: pulse 2s infinite;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1200px) {
     .navbar-brand {
         font-size: 2.2rem;
@@ -634,7 +634,7 @@ footer p {
     }
 }
 
-/* Additional responsive fixes */
+
 @media (max-width: 1200px) {
     .navbar-nav {
         flex-wrap: wrap;
